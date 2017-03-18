@@ -1,15 +1,15 @@
 Ruby on Rails >> Routes, Views, Controllers and Assets >> [Project: Basic Routes, Views and Controllers](http://www.theodinproject.com/courses/ruby-on-rails/lessons/basic-routes-views-and-controllers)
 
-#Project: Basic Routes, Views and Controllers
+# Project: Basic Routes, Views and Controllers
 
-##Warmup: Sending Params with RestClient
+## Warmup: Sending Params with RestClient
 
 In this project, you'll get a chance to interact with a Rails application from the command line by sending requests manually. You'll first build a very simple app (to get some practice with the steps involved in creating a new one) and then a simple script which uses the RestClient gem (which you used in the first project) to send some requests and examine the server output.
 
 There's a lot of steps but it's actually quite straightforward.
 
-###Your Task
-####Application Skeleton
+### Your Task
+#### Application Skeleton
 
 First you need to create a simple Rails app:
 
@@ -18,7 +18,7 @@ First you need to create a simple Rails app:
 3. Quiz: Which routes were just created (there are 7 of them)? More specifically, try to name the 7 actions and what they do. Now try to match these routes to the appropriate HTTP verbs and URLs (remember, some are created by using the same URL but a different HTTP verb).
 4. Verify by using `$ rake routes`
 
-####Test Script
+#### Test Script
 
 Next create a simple script file which will run RestClient and allow you to start pinging your new app:
 
@@ -65,7 +65,7 @@ Sending Requests
 
 13. Change your script file to make each of the remaining 3 GET requests. For the ones that relate to a specific resource (e.g. `#show`), you'll need to include an ID value in the URL (which we won't actually be using).
 
-####Non-GET Requests
+#### Non-GET Requests
 
 1. Now create the `#create` action in your controller, which would be accessed using a POST request. Update your script to make a simple POST `#post` request sending no data, e.g. `RestClient.post(url,"")`. See the [RestClient Docs](https://github.com/rest-client/rest-client) for info on how to structure the non-GET requests.
 2. Error! Back to the server: `ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):`. Aha! Rails doesn't like it when you try to make POST requests to your application using the command line since POST requests typically represent the submission of form data which may be sensitive. The same is true for DELETE and PATCH requests.
